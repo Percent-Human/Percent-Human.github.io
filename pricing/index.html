@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJKLF7PHEE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZJKLF7PHEE');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Percent Human">
+  <meta name="description" content="Easy-to-use content checker, that finds AI generated text from ChatGPT and GPT-3">
+  <title>Percent Human: Detect ChatGPT AI Content</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/home/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/home/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/home/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="/static/home/favicon-128x128.png">
+  
+  <script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.addEventListener("load",function(){window.wpcc.init({"corners":"large","colors":{"popup":{"background":"#ffe8ff","text":"#000000","border":"#9f5ec2"},"button":{"background":"#9f5ec2","text":"#ffffff"}},"transparency":"15","content":{"href":"https://percenthuman.app/cookie-policy/"}})});</script>
+
+  
+
+<link rel="stylesheet" href="/static/css/dist/styles.css?v=1731708362">
+
+
+
+
+
+</head>
+<body class="overflow-x-hidden antialiased">
+  <!-- Navbar -->
+  <header class="fixed z-50 w-full top-0 bg-white">
+    <nav class="border-gray-200 px-2 sm:px-2.5 py-2.5 mx-auto w-full max-w-screen-2xl items-center">
+            <div class="flex flex-wrap justify-between items-center mx-auto md:px-5 px-2">
+        <a href="/" class="flex">
+          <img class="h-7 mr-3" src="/static/home/favicon-128x128.png" alt="logo" />
+          <span class="self-center text-md md:text-lg font-semibold whitespace-nowrap dark:text-white">Percent
+            Human</span>
+        </a>
+        <div class="flex md:order-2 items-center">
+          
+          <a href="/accounts/signup/" class="text-sm md:text-md">
+            <div
+            class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg px-3 md:px-5 md:py-2.5 py-1.5 text-center mr-3 md:mr-0 hover:scale-[1.02] transition-transform">
+            <span class="text-sm md:text-md">Get Started</span>
+          </div></a>
+          
+          <div
+            class="hidden md:block text-gray-700 dark:focus:ring-green-800 font-medium text-sm md:text-md px-5 py-2.5 text-center mr-3 md:mr-0 hover:text-fuchsia-700">
+            <a href="/accounts/login/">Login</a>
+          </div>
+          
+          <button data-collapse-toggle="mobile-menu-4" type="button" class="
+                inline-flex
+                items-center
+                p-2
+                text-sm text-gray-500
+                rounded-lg
+                md:hidden
+                hover:bg-gray-100focus:outline-none
+                focus:ring-2 focus:ring-gray-200
+                dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
+              " aria-controls="mobile-menu-4" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
+    <ul class="flex flex-col mt-4 md:flex-row sm-space-x-6 md:space-x-8 md:mt-0 text-sm md:text-md md:font-medium">
+      <li>
+        <a
+          href="/"
+          class="block py-2 pr-4 pl-3 text-gray-900 border-b border-gray-100 hover:text-gradient md:hover:bg-transparent md:border-0 md:hover:text-gradient md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          aria-current="page"
+          >Features</a
+        >
+      </li>
+      <li>
+        <a
+          href="/#ai"
+          class="block py-2 pr-4 pl-3 text-gray-900 border-b border-gray-100 hover:text-gradient md:hover:bg-transparent md:border-0 md:hover:text-gradient md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          >How It Works</a
+        >
+      </li>
+  
+      <li>
+        <a
+          href="/pricing/"
+          class="block py-2 pr-4 pl-3 text-gray-900 border-b border-gray-100 hover:text-gradient md:hover:bg-transparent md:border-0 md:hover:text-gradient md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          >Pricing</a
+        >
+      </li>
+      <li>
+        <a
+          href="/about/"
+          class="block py-2 pr-4 pl-3 text-gray-900 border-b border-gray-100 hover:text-gradient md:hover:bg-transparent md:border-0 md:hover:text-gradient md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          >Our Team</a
+        >
+      </li>
+      <li>
+        <a
+          href="/pricing/#faq"
+          class="block py-2 pr-4 pl-3 text-gray-900 border-b border-gray-100 hover:text-gradient md:hover:bg-transparent md:border-0 md:hover:text-gradient md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          >FAQ</a
+        >
+      </li>
+      <li>
+        <a class="block md:hidden text-gray-900 border-b md:hover:bg-transparent md:border-0 border-gray-100 dark:focus:ring-green-800 font-medium text-md py-2 pr-4 pl-3 text-center hover:text-gradient md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" href="/accounts/login/">Login</a>
+      </li>
+    </ul>
+  </div>
+  
+      </div>
+    </nav>
+  </header>
+  <div class="mt-24">
+    
+    
+<!-- Pricing -->
+<section>
+  <div class="relative w-full h-full overflow-x-hidden">
+    
+    <div class="absolute hidden md:block z-10 inset-y-14 -right-24">
+      <svg class="h-48 w-48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" zoomAndPan="magnify" viewBox="0 0 750 749.999995" height="1000" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="dbfc17722b"><path d="M 78 71 L 631 71 L 631 729 L 78 729 Z M 78 71 " clip-rule="nonzero"/></clipPath><clipPath id="4e2e114628"><path d="M 330.777344 131.28125 C 385.738281 321.941406 583.5625 222.667969 623.367188 401.914062 C 679.53125 654.671875 382.082031 871.589844 301.492188 611.074219 C 257.851562 470.121094 81.023438 537.878906 78.125 317.21875 C 75.230469 96.554688 292.886719 -0.0429688 330.777344 131.28125 Z M 330.777344 131.28125 " clip-rule="nonzero"/></clipPath><linearGradient x1="1456.811036" gradientTransform="matrix(0.000000000000000273, 4.4578, -4.457484, 0.000000000000000273, -814.997002, -6494.172754)" y1="-262.30701" x2="1625.05544" gradientUnits="userSpaceOnUse" y2="-262.30701" id="0ea25ce09b"><stop stop-opacity="1" stop-color="rgb(100%, 68.598938%, 84.298706%)" offset="0"/><stop stop-opacity="1" stop-color="rgb(100%, 68.598938%, 84.298706%)" offset="0.0625"/><stop stop-opacity="1" stop-color="rgb(100%, 68.598938%, 84.298706%)" offset="0.09375"/><stop stop-opacity="1" stop-color="rgb(99.899292%, 68.431091%, 84.27124%)" offset="0.101562"/><stop stop-opacity="1" stop-color="rgb(99.667358%, 68.03894%, 84.207153%)" offset="0.105469"/><stop stop-opacity="1" stop-color="rgb(99.536133%, 67.816162%, 84.170532%)" offset="0.109375"/><stop stop-opacity="1" stop-color="rgb(99.403381%, 67.591858%, 84.132385%)" offset="0.113281"/><stop stop-opacity="1" stop-color="rgb(99.272156%, 67.367554%, 84.095764%)" offset="0.117187"/><stop stop-opacity="1" stop-color="rgb(99.139404%, 67.14325%, 84.059143%)" offset="0.121094"/><stop stop-opacity="1" stop-color="rgb(99.008179%, 66.920471%, 84.022522%)" offset="0.125"/><stop stop-opacity="1" stop-color="rgb(98.875427%, 66.696167%, 83.985901%)" offset="0.128906"/><stop stop-opacity="1" stop-color="rgb(98.744202%, 66.473389%, 83.94928%)" offset="0.132812"/><stop stop-opacity="1" stop-color="rgb(98.61145%, 66.249084%, 83.912659%)" offset="0.136719"/><stop stop-opacity="1" stop-color="rgb(98.480225%, 66.02478%, 83.876038%)" offset="0.140625"/><stop stop-opacity="1" stop-color="rgb(98.347473%, 65.800476%, 83.837891%)" offset="0.144531"/><stop stop-opacity="1" stop-color="rgb(98.214722%, 65.577698%, 83.80127%)" offset="0.148438"/><stop stop-opacity="1" stop-color="rgb(98.08197%, 65.353394%, 83.764648%)" offset="0.152344"/><stop stop-opacity="1" stop-color="rgb(97.950745%, 65.130615%, 83.728027%)" offset="0.15625"/><stop stop-opacity="1" stop-color="rgb(97.817993%, 64.906311%, 83.691406%)" offset="0.160156"/><stop stop-opacity="1" stop-color="rgb(97.686768%, 64.682007%, 83.654785%)" offset="0.164062"/><stop stop-opacity="1" stop-color="rgb(97.554016%, 64.457703%, 83.616638%)" offset="0.167969"/><stop stop-opacity="1" stop-color="rgb(97.422791%, 64.234924%, 83.580017%)" offset="0.171875"/><stop stop-opacity="1" stop-color="rgb(97.290039%, 64.01062%, 83.543396%)" offset="0.175781"/><stop stop-opacity="1" stop-color="rgb(97.158813%, 63.787842%, 83.506775%)" offset="0.179687"/><stop stop-opacity="1" stop-color="rgb(97.026062%, 63.563538%, 83.470154%)" offset="0.183594"/><stop stop-opacity="1" stop-color="rgb(96.894836%, 63.339233%, 83.433533%)" offset="0.1875"/><stop stop-opacity="1" stop-color="rgb(96.762085%, 63.114929%, 83.395386%)" offset="0.191406"/><stop stop-opacity="1" stop-color="rgb(96.629333%, 62.892151%, 83.358765%)" offset="0.195312"/><stop stop-opacity="1" stop-color="rgb(96.496582%, 62.667847%, 83.322144%)" offset="0.199219"/><stop stop-opacity="1" stop-color="rgb(96.365356%, 62.445068%, 83.285522%)" offset="0.203125"/><stop stop-opacity="1" stop-color="rgb(96.232605%, 62.220764%, 83.248901%)" offset="0.207031"/><stop stop-opacity="1" stop-color="rgb(96.101379%, 61.99646%, 83.21228%)" offset="0.210938"/><stop stop-opacity="1" stop-color="rgb(95.968628%, 61.772156%, 83.175659%)" offset="0.214844"/><stop stop-opacity="1" stop-color="rgb(95.837402%, 61.549377%, 83.139038%)" offset="0.21875"/><stop stop-opacity="1" stop-color="rgb(95.704651%, 61.325073%, 83.100891%)" offset="0.222656"/><stop stop-opacity="1" stop-color="rgb(95.573425%, 61.102295%, 83.06427%)" offset="0.226562"/><stop stop-opacity="1" stop-color="rgb(95.440674%, 60.877991%, 83.027649%)" offset="0.230469"/><stop stop-opacity="1" stop-color="rgb(95.309448%, 60.653687%, 82.991028%)" offset="0.234375"/><stop stop-opacity="1" stop-color="rgb(95.176697%, 60.429382%, 82.954407%)" offset="0.238281"/><stop stop-opacity="1" stop-color="rgb(95.043945%, 60.206604%, 82.917786%)" offset="0.242188"/><stop stop-opacity="1" stop-color="rgb(94.911194%, 59.9823%, 82.879639%)" offset="0.246094"/><stop stop-opacity="1" stop-color="rgb(94.779968%, 59.759521%, 82.843018%)" offset="0.25"/><stop stop-opacity="1" stop-color="rgb(94.647217%, 59.535217%, 82.806396%)" offset="0.253906"/><stop stop-opacity="1" stop-color="rgb(94.515991%, 59.310913%, 82.769775%)" offset="0.257812"/><stop stop-opacity="1" stop-color="rgb(94.38324%, 59.086609%, 82.733154%)" offset="0.261719"/><stop stop-opacity="1" stop-color="rgb(94.252014%, 58.863831%, 82.696533%)" offset="0.265625"/><stop stop-opacity="1" stop-color="rgb(94.119263%, 58.639526%, 82.658386%)" offset="0.269531"/><stop stop-opacity="1" stop-color="rgb(93.988037%, 58.416748%, 82.621765%)" offset="0.273438"/><stop stop-opacity="1" stop-color="rgb(93.855286%, 58.192444%, 82.585144%)" offset="0.277344"/><stop stop-opacity="1" stop-color="rgb(93.72406%, 57.96814%, 82.548523%)" offset="0.28125"/><stop stop-opacity="1" stop-color="rgb(93.591309%, 57.743835%, 82.511902%)" offset="0.285156"/><stop stop-opacity="1" stop-color="rgb(93.458557%, 57.521057%, 82.475281%)" offset="0.289062"/><stop stop-opacity="1" stop-color="rgb(93.325806%, 57.296753%, 82.43866%)" offset="0.292969"/><stop stop-opacity="1" stop-color="rgb(93.19458%, 57.073975%, 82.402039%)" offset="0.296875"/><stop stop-opacity="1" stop-color="rgb(93.061829%, 56.84967%, 82.363892%)" offset="0.300781"/><stop stop-opacity="1" stop-color="rgb(92.930603%, 56.625366%, 82.327271%)" offset="0.304688"/><stop stop-opacity="1" stop-color="rgb(92.797852%, 56.401062%, 82.290649%)" offset="0.308594"/><stop stop-opacity="1" stop-color="rgb(92.666626%, 56.178284%, 82.254028%)" offset="0.3125"/><stop stop-opacity="1" stop-color="rgb(92.533875%, 55.953979%, 82.217407%)" offset="0.316406"/><stop stop-opacity="1" stop-color="rgb(92.402649%, 55.731201%, 82.180786%)" offset="0.320312"/><stop stop-opacity="1" stop-color="rgb(92.269897%, 55.506897%, 82.142639%)" offset="0.324219"/><stop stop-opacity="1" stop-color="rgb(92.138672%, 55.282593%, 82.106018%)" offset="0.328125"/><stop stop-opacity="1" stop-color="rgb(92.00592%, 55.058289%, 82.069397%)" offset="0.332031"/><stop stop-opacity="1" stop-color="rgb(91.873169%, 54.83551%, 82.032776%)" offset="0.335937"/><stop stop-opacity="1" stop-color="rgb(91.740417%, 54.611206%, 81.996155%)" offset="0.339844"/><stop stop-opacity="1" stop-color="rgb(91.609192%, 54.388428%, 81.959534%)" offset="0.34375"/><stop stop-opacity="1" stop-color="rgb(91.47644%, 54.164124%, 81.922913%)" offset="0.347656"/><stop stop-opacity="1" stop-color="rgb(91.345215%, 53.939819%, 81.886292%)" offset="0.351562"/><stop stop-opacity="1" stop-color="rgb(91.212463%, 53.715515%, 81.848145%)" offset="0.355469"/><stop stop-opacity="1" stop-color="rgb(91.081238%, 53.492737%, 81.811523%)" offset="0.359375"/><stop stop-opacity="1" stop-color="rgb(90.948486%, 53.268433%, 81.774902%)" offset="0.363281"/><stop stop-opacity="1" stop-color="rgb(90.817261%, 53.045654%, 81.738281%)" offset="0.367187"/><stop stop-opacity="1" stop-color="rgb(90.684509%, 52.82135%, 81.70166%)" offset="0.371094"/><stop stop-opacity="1" stop-color="rgb(90.553284%, 52.597046%, 81.665039%)" offset="0.375"/><stop stop-opacity="1" stop-color="rgb(90.420532%, 52.372742%, 81.626892%)" offset="0.378906"/><stop stop-opacity="1" stop-color="rgb(90.287781%, 52.149963%, 81.590271%)" offset="0.382812"/><stop stop-opacity="1" stop-color="rgb(90.155029%, 51.925659%, 81.55365%)" offset="0.386719"/><stop stop-opacity="1" stop-color="rgb(90.023804%, 51.702881%, 81.517029%)" offset="0.390625"/><stop stop-opacity="1" stop-color="rgb(89.891052%, 51.478577%, 81.480408%)" offset="0.394531"/><stop stop-opacity="1" stop-color="rgb(89.759827%, 51.254272%, 81.443787%)" offset="0.398437"/><stop stop-opacity="1" stop-color="rgb(89.627075%, 51.029968%, 81.40564%)" offset="0.402344"/><stop stop-opacity="1" stop-color="rgb(89.49585%, 50.80719%, 81.369019%)" offset="0.40625"/><stop stop-opacity="1" stop-color="rgb(89.363098%, 50.582886%, 81.332397%)" offset="0.410156"/><stop stop-opacity="1" stop-color="rgb(89.231873%, 50.360107%, 81.295776%)" offset="0.414062"/><stop stop-opacity="1" stop-color="rgb(89.099121%, 50.135803%, 81.259155%)" offset="0.417969"/><stop stop-opacity="1" stop-color="rgb(88.967896%, 49.911499%, 81.222534%)" offset="0.421875"/><stop stop-opacity="1" stop-color="rgb(88.835144%, 49.687195%, 81.185913%)" offset="0.425781"/><stop stop-opacity="1" stop-color="rgb(88.702393%, 49.464417%, 81.149292%)" offset="0.429687"/><stop stop-opacity="1" stop-color="rgb(88.569641%, 49.240112%, 81.111145%)" offset="0.433594"/><stop stop-opacity="1" stop-color="rgb(88.438416%, 49.017334%, 81.074524%)" offset="0.4375"/><stop stop-opacity="1" stop-color="rgb(88.305664%, 48.79303%, 81.037903%)" offset="0.441406"/><stop stop-opacity="1" stop-color="rgb(88.174438%, 48.568726%, 81.001282%)" offset="0.445312"/><stop stop-opacity="1" stop-color="rgb(88.041687%, 48.344421%, 80.964661%)" offset="0.449219"/><stop stop-opacity="1" stop-color="rgb(87.910461%, 48.121643%, 80.92804%)" offset="0.453125"/><stop stop-opacity="1" stop-color="rgb(87.77771%, 47.897339%, 80.889893%)" offset="0.457031"/><stop stop-opacity="1" stop-color="rgb(87.646484%, 47.674561%, 80.853271%)" offset="0.460937"/><stop stop-opacity="1" stop-color="rgb(87.513733%, 47.450256%, 80.81665%)" offset="0.464844"/><stop stop-opacity="1" stop-color="rgb(87.380981%, 47.227478%, 80.780029%)" offset="0.46875"/><stop stop-opacity="1" stop-color="rgb(87.24823%, 47.003174%, 80.743408%)" offset="0.472656"/><stop stop-opacity="1" stop-color="rgb(87.117004%, 46.77887%, 80.706787%)" offset="0.476562"/><stop stop-opacity="1" stop-color="rgb(86.984253%, 46.554565%, 80.66864%)" offset="0.480469"/><stop stop-opacity="1" stop-color="rgb(86.853027%, 46.331787%, 80.632019%)" offset="0.484375"/><stop stop-opacity="1" stop-color="rgb(86.720276%, 46.107483%, 80.595398%)" offset="0.488281"/><stop stop-opacity="1" stop-color="rgb(86.58905%, 45.884705%, 80.558777%)" offset="0.492187"/><stop stop-opacity="1" stop-color="rgb(86.456299%, 45.6604%, 80.522156%)" offset="0.496094"/><stop stop-opacity="1" stop-color="rgb(86.325073%, 45.436096%, 80.485535%)" offset="0.5"/><stop stop-opacity="1" stop-color="rgb(86.192322%, 45.211792%, 80.448914%)" offset="0.503906"/><stop stop-opacity="1" stop-color="rgb(86.061096%, 44.989014%, 80.412292%)" offset="0.507812"/><stop stop-opacity="1" stop-color="rgb(85.928345%, 44.764709%, 80.374146%)" offset="0.511719"/><stop stop-opacity="1" stop-color="rgb(85.795593%, 44.541931%, 80.337524%)" offset="0.515625"/><stop stop-opacity="1" stop-color="rgb(85.662842%, 44.317627%, 80.300903%)" offset="0.519531"/><stop stop-opacity="1" stop-color="rgb(85.531616%, 44.093323%, 80.264282%)" offset="0.523438"/><stop stop-opacity="1" stop-color="rgb(85.398865%, 43.869019%, 80.227661%)" offset="0.527344"/><stop stop-opacity="1" stop-color="rgb(85.267639%, 43.64624%, 80.19104%)" offset="0.53125"/><stop stop-opacity="1" stop-color="rgb(85.134888%, 43.421936%, 80.152893%)" offset="0.535156"/><stop stop-opacity="1" stop-color="rgb(85.003662%, 43.199158%, 80.116272%)" offset="0.539062"/><stop stop-opacity="1" stop-color="rgb(84.870911%, 42.974854%, 80.079651%)" offset="0.542969"/><stop stop-opacity="1" stop-color="rgb(84.739685%, 42.750549%, 80.04303%)" offset="0.546875"/><stop stop-opacity="1" stop-color="rgb(84.606934%, 42.526245%, 80.006409%)" offset="0.550781"/><stop stop-opacity="1" stop-color="rgb(84.475708%, 42.303467%, 79.969788%)" offset="0.554688"/><stop stop-opacity="1" stop-color="rgb(84.342957%, 42.079163%, 79.931641%)" offset="0.558594"/><stop stop-opacity="1" stop-color="rgb(84.210205%, 41.856384%, 79.89502%)" offset="0.5625"/><stop stop-opacity="1" stop-color="rgb(84.077454%, 41.63208%, 79.858398%)" offset="0.566406"/><stop stop-opacity="1" stop-color="rgb(83.946228%, 41.407776%, 79.821777%)" offset="0.570312"/><stop stop-opacity="1" stop-color="rgb(83.813477%, 41.183472%, 79.785156%)" offset="0.574219"/><stop stop-opacity="1" stop-color="rgb(83.682251%, 40.960693%, 79.748535%)" offset="0.578125"/><stop stop-opacity="1" stop-color="rgb(83.5495%, 40.736389%, 79.711914%)" offset="0.582031"/><stop stop-opacity="1" stop-color="rgb(83.418274%, 40.513611%, 79.675293%)" offset="0.585938"/><stop stop-opacity="1" stop-color="rgb(83.285522%, 40.289307%, 79.637146%)" offset="0.589844"/><stop stop-opacity="1" stop-color="rgb(83.154297%, 40.065002%, 79.600525%)" offset="0.59375"/><stop stop-opacity="1" stop-color="rgb(83.021545%, 39.840698%, 79.563904%)" offset="0.597656"/><stop stop-opacity="1" stop-color="rgb(82.89032%, 39.61792%, 79.527283%)" offset="0.601562"/><stop stop-opacity="1" stop-color="rgb(82.757568%, 39.393616%, 79.490662%)" offset="0.605469"/><stop stop-opacity="1" stop-color="rgb(82.624817%, 39.170837%, 79.454041%)" offset="0.609375"/><stop stop-opacity="1" stop-color="rgb(82.492065%, 38.946533%, 79.415894%)" offset="0.613281"/><stop stop-opacity="1" stop-color="rgb(82.36084%, 38.722229%, 79.379272%)" offset="0.617188"/><stop stop-opacity="1" stop-color="rgb(82.228088%, 38.497925%, 79.342651%)" offset="0.621094"/><stop stop-opacity="1" stop-color="rgb(82.096863%, 38.275146%, 79.30603%)" offset="0.625"/><stop stop-opacity="1" stop-color="rgb(81.964111%, 38.050842%, 79.269409%)" offset="0.628906"/><stop stop-opacity="1" stop-color="rgb(81.832886%, 37.828064%, 79.232788%)" offset="0.632812"/><stop stop-opacity="1" stop-color="rgb(81.700134%, 37.60376%, 79.194641%)" offset="0.636719"/><stop stop-opacity="1" stop-color="rgb(81.568909%, 37.379456%, 79.15802%)" offset="0.640625"/><stop stop-opacity="1" stop-color="rgb(81.436157%, 37.155151%, 79.121399%)" offset="0.644531"/><stop stop-opacity="1" stop-color="rgb(81.304932%, 36.932373%, 79.084778%)" offset="0.648437"/><stop stop-opacity="1" stop-color="rgb(81.17218%, 36.708069%, 79.048157%)" offset="0.652344"/><stop stop-opacity="1" stop-color="rgb(81.039429%, 36.485291%, 79.011536%)" offset="0.65625"/><stop stop-opacity="1" stop-color="rgb(80.906677%, 36.260986%, 78.974915%)" offset="0.660156"/><stop stop-opacity="1" stop-color="rgb(80.775452%, 36.036682%, 78.938293%)" offset="0.664062"/><stop stop-opacity="1" stop-color="rgb(80.6427%, 35.812378%, 78.900146%)" offset="0.667969"/><stop stop-opacity="1" stop-color="rgb(80.511475%, 35.5896%, 78.863525%)" offset="0.671875"/><stop stop-opacity="1" stop-color="rgb(80.378723%, 35.365295%, 78.826904%)" offset="0.675781"/><stop stop-opacity="1" stop-color="rgb(80.247498%, 35.142517%, 78.790283%)" offset="0.679687"/><stop stop-opacity="1" stop-color="rgb(80.114746%, 34.918213%, 78.753662%)" offset="0.683594"/><stop stop-opacity="1" stop-color="rgb(79.983521%, 34.693909%, 78.717041%)" offset="0.6875"/><stop stop-opacity="1" stop-color="rgb(79.850769%, 34.469604%, 78.678894%)" offset="0.691406"/><stop stop-opacity="1" stop-color="rgb(79.719543%, 34.246826%, 78.642273%)" offset="0.695312"/><stop stop-opacity="1" stop-color="rgb(79.586792%, 34.022522%, 78.605652%)" offset="0.699219"/><stop stop-opacity="1" stop-color="rgb(79.454041%, 33.799744%, 78.569031%)" offset="0.703125"/><stop stop-opacity="1" stop-color="rgb(79.321289%, 33.575439%, 78.53241%)" offset="0.707031"/><stop stop-opacity="1" stop-color="rgb(79.190063%, 33.351135%, 78.495789%)" offset="0.710937"/><stop stop-opacity="1" stop-color="rgb(79.057312%, 33.126831%, 78.457642%)" offset="0.714844"/><stop stop-opacity="1" stop-color="rgb(78.926086%, 32.904053%, 78.421021%)" offset="0.71875"/><stop stop-opacity="1" stop-color="rgb(78.793335%, 32.679749%, 78.384399%)" offset="0.722656"/><stop stop-opacity="1" stop-color="rgb(78.662109%, 32.45697%, 78.347778%)" offset="0.726562"/><stop stop-opacity="1" stop-color="rgb(78.529358%, 32.232666%, 78.311157%)" offset="0.730469"/><stop stop-opacity="1" stop-color="rgb(78.398132%, 32.008362%, 78.274536%)" offset="0.734375"/><stop stop-opacity="1" stop-color="rgb(78.265381%, 31.784058%, 78.237915%)" offset="0.738281"/><stop stop-opacity="1" stop-color="rgb(78.134155%, 31.561279%, 78.201294%)" offset="0.742187"/><stop stop-opacity="1" stop-color="rgb(78.001404%, 31.336975%, 78.163147%)" offset="0.746094"/><stop stop-opacity="1" stop-color="rgb(77.868652%, 31.114197%, 78.126526%)" offset="0.75"/><stop stop-opacity="1" stop-color="rgb(77.735901%, 30.889893%, 78.089905%)" offset="0.753906"/><stop stop-opacity="1" stop-color="rgb(77.604675%, 30.665588%, 78.053284%)" offset="0.757812"/><stop stop-opacity="1" stop-color="rgb(77.471924%, 30.441284%, 78.016663%)" offset="0.761719"/><stop stop-opacity="1" stop-color="rgb(77.340698%, 30.218506%, 77.980042%)" offset="0.765625"/><stop stop-opacity="1" stop-color="rgb(77.207947%, 29.994202%, 77.941895%)" offset="0.769531"/><stop stop-opacity="1" stop-color="rgb(77.076721%, 29.771423%, 77.905273%)" offset="0.773438"/><stop stop-opacity="1" stop-color="rgb(76.94397%, 29.547119%, 77.868652%)" offset="0.777344"/><stop stop-opacity="1" stop-color="rgb(76.812744%, 29.322815%, 77.832031%)" offset="0.78125"/><stop stop-opacity="1" stop-color="rgb(76.679993%, 29.098511%, 77.79541%)" offset="0.785156"/><stop stop-opacity="1" stop-color="rgb(76.548767%, 28.875732%, 77.758789%)" offset="0.789062"/><stop stop-opacity="1" stop-color="rgb(76.416016%, 28.651428%, 77.720642%)" offset="0.792969"/><stop stop-opacity="1" stop-color="rgb(76.283264%, 28.42865%, 77.684021%)" offset="0.796875"/><stop stop-opacity="1" stop-color="rgb(76.150513%, 28.204346%, 77.6474%)" offset="0.800781"/><stop stop-opacity="1" stop-color="rgb(76.019287%, 27.980042%, 77.610779%)" offset="0.804688"/><stop stop-opacity="1" stop-color="rgb(75.886536%, 27.755737%, 77.574158%)" offset="0.808594"/><stop stop-opacity="1" stop-color="rgb(75.75531%, 27.532959%, 77.537537%)" offset="0.8125"/><stop stop-opacity="1" stop-color="rgb(75.622559%, 27.308655%, 77.500916%)" offset="0.816406"/><stop stop-opacity="1" stop-color="rgb(75.491333%, 27.085876%, 77.464294%)" offset="0.820312"/><stop stop-opacity="1" stop-color="rgb(75.358582%, 26.861572%, 77.426147%)" offset="0.824219"/><stop stop-opacity="1" stop-color="rgb(75.227356%, 26.637268%, 77.389526%)" offset="0.828125"/><stop stop-opacity="1" stop-color="rgb(75.094604%, 26.412964%, 77.352905%)" offset="0.832031"/><stop stop-opacity="1" stop-color="rgb(74.963379%, 26.190186%, 77.316284%)" offset="0.835938"/><stop stop-opacity="1" stop-color="rgb(74.830627%, 25.965881%, 77.279663%)" offset="0.839844"/><stop stop-opacity="1" stop-color="rgb(74.697876%, 25.743103%, 77.243042%)" offset="0.84375"/><stop stop-opacity="1" stop-color="rgb(74.565125%, 25.518799%, 77.204895%)" offset="0.847656"/><stop stop-opacity="1" stop-color="rgb(74.433899%, 25.296021%, 77.168274%)" offset="0.851562"/><stop stop-opacity="1" stop-color="rgb(74.301147%, 25.071716%, 77.131653%)" offset="0.855469"/><stop stop-opacity="1" stop-color="rgb(74.169922%, 24.847412%, 77.095032%)" offset="0.859375"/><stop stop-opacity="1" stop-color="rgb(74.03717%, 24.623108%, 77.058411%)" offset="0.863281"/><stop stop-opacity="1" stop-color="rgb(73.905945%, 24.40033%, 77.02179%)" offset="0.867188"/><stop stop-opacity="1" stop-color="rgb(73.773193%, 24.176025%, 76.983643%)" offset="0.871094"/><stop stop-opacity="1" stop-color="rgb(73.641968%, 23.953247%, 76.947021%)" offset="0.875"/><stop stop-opacity="1" stop-color="rgb(73.509216%, 23.728943%, 76.9104%)" offset="0.878906"/><stop stop-opacity="1" stop-color="rgb(73.377991%, 23.504639%, 76.873779%)" offset="0.882812"/><stop stop-opacity="1" stop-color="rgb(73.245239%, 23.280334%, 76.837158%)" offset="0.886719"/><stop stop-opacity="1" stop-color="rgb(73.112488%, 23.057556%, 76.800537%)" offset="0.890625"/><stop stop-opacity="1" stop-color="rgb(72.979736%, 22.833252%, 76.763916%)" offset="0.894531"/><stop stop-opacity="1" stop-color="rgb(72.848511%, 22.610474%, 76.727295%)" offset="0.898438"/><stop stop-opacity="1" stop-color="rgb(72.715759%, 22.386169%, 76.689148%)" offset="0.902344"/><stop stop-opacity="1" stop-color="rgb(72.584534%, 22.161865%, 76.652527%)" offset="0.90625"/><stop stop-opacity="1" stop-color="rgb(72.451782%, 21.937561%, 76.615906%)" offset="0.910156"/><stop stop-opacity="1" stop-color="rgb(72.320557%, 21.714783%, 76.579285%)" offset="0.914062"/><stop stop-opacity="1" stop-color="rgb(72.187805%, 21.490479%, 76.542664%)" offset="0.917969"/><stop stop-opacity="1" stop-color="rgb(72.05658%, 21.2677%, 76.506042%)" offset="0.921875"/><stop stop-opacity="1" stop-color="rgb(71.923828%, 21.043396%, 76.467896%)" offset="0.925781"/><stop stop-opacity="1" stop-color="rgb(71.792603%, 20.819092%, 76.431274%)" offset="0.929688"/><stop stop-opacity="1" stop-color="rgb(71.659851%, 20.594788%, 76.394653%)" offset="0.933594"/><stop stop-opacity="1" stop-color="rgb(71.5271%, 20.372009%, 76.358032%)" offset="0.9375"/><stop stop-opacity="1" stop-color="rgb(71.394348%, 20.147705%, 76.321411%)" offset="0.941406"/><stop stop-opacity="1" stop-color="rgb(71.263123%, 19.924927%, 76.28479%)" offset="0.945312"/><stop stop-opacity="1" stop-color="rgb(71.130371%, 19.700623%, 76.248169%)" offset="0.949219"/><stop stop-opacity="1" stop-color="rgb(70.999146%, 19.476318%, 76.211548%)" offset="0.953125"/><stop stop-opacity="1" stop-color="rgb(70.866394%, 19.252014%, 76.173401%)" offset="0.957031"/><stop stop-opacity="1" stop-color="rgb(70.735168%, 19.029236%, 76.13678%)" offset="0.960938"/><stop stop-opacity="1" stop-color="rgb(70.666504%, 18.913269%, 76.116943%)" offset="0.96875"/><stop stop-opacity="1" stop-color="rgb(70.599365%, 18.798828%, 76.098633%)" offset="1"/></linearGradient></defs><g clip-path="url(#dbfc17722b)"><g clip-path="url(#4e2e114628)"><path fill="url(#0ea25ce09b)" d="M 679.53125 0 L 75.230469 0 L 75.230469 750 L 679.53125 750 Z M 679.53125 0 " fill-rule="nonzero"/></g></g></svg>
+    </div>
+    
+    <div class="absolute hidden md:block z-10 bottom-0 -left-20">
+      <svg class="h-48 w-48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" zoomAndPan="magnify" viewBox="0 0 750 749.999995" height="1000" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="11d6cf8455"><path d="M 80 34 L 658 34 L 658 710 L 80 710 Z M 80 34 " clip-rule="nonzero"/></clipPath><clipPath id="46be7fe50b"><path d="M 378.34375 707.347656 C 493.691406 693.320312 649.691406 442.59375 656.746094 353.660156 C 674.339844 132.777344 340.921875 -76.519531 183.828125 100.695312 C 60.972656 239.414062 287.097656 263.933594 154.503906 385.941406 C -40.804688 565.742188 192.722656 729.976562 378.34375 707.347656 Z M 378.34375 707.347656 " clip-rule="nonzero"/></clipPath><linearGradient x1="-310.106018" gradientTransform="matrix(0, -4.973781, -4.969751, 0, -1767.323085, -812.769694)" y1="-429.88199" x2="-163.410834" gradientUnits="userSpaceOnUse" y2="-429.88199" id="5b6ac9d674"><stop stop-opacity="1" stop-color="rgb(100%, 68.598938%, 84.298706%)" offset="0"/><stop stop-opacity="1" stop-color="rgb(99.906921%, 68.522644%, 84.307861%)" offset="0.03125"/><stop stop-opacity="1" stop-color="rgb(99.613953%, 68.280029%, 84.339905%)" offset="0.0351562"/><stop stop-opacity="1" stop-color="rgb(99.414062%, 68.115234%, 84.362793%)" offset="0.0390625"/><stop stop-opacity="1" stop-color="rgb(99.212646%, 67.948914%, 84.384155%)" offset="0.0429687"/><stop stop-opacity="1" stop-color="rgb(99.012756%, 67.784119%, 84.405518%)" offset="0.046875"/><stop stop-opacity="1" stop-color="rgb(98.81134%, 67.619324%, 84.42688%)" offset="0.0507812"/><stop stop-opacity="1" stop-color="rgb(98.61145%, 67.454529%, 84.448242%)" offset="0.0546875"/><stop stop-opacity="1" stop-color="rgb(98.410034%, 67.288208%, 84.469604%)" offset="0.0585938"/><stop stop-opacity="1" stop-color="rgb(98.210144%, 67.123413%, 84.490967%)" offset="0.0625"/><stop stop-opacity="1" stop-color="rgb(98.008728%, 66.957092%, 84.512329%)" offset="0.0664062"/><stop stop-opacity="1" stop-color="rgb(97.808838%, 66.792297%, 84.533691%)" offset="0.0703125"/><stop stop-opacity="1" stop-color="rgb(97.607422%, 66.625977%, 84.555054%)" offset="0.0742187"/><stop stop-opacity="1" stop-color="rgb(97.407532%, 66.461182%, 84.577942%)" offset="0.078125"/><stop stop-opacity="1" stop-color="rgb(97.207642%, 66.294861%, 84.599304%)" offset="0.0820312"/><stop stop-opacity="1" stop-color="rgb(97.007751%, 66.130066%, 84.620667%)" offset="0.0859375"/><stop stop-opacity="1" stop-color="rgb(96.806335%, 65.963745%, 84.642029%)" offset="0.0898438"/><stop stop-opacity="1" stop-color="rgb(96.606445%, 65.79895%, 84.663391%)" offset="0.09375"/><stop stop-opacity="1" stop-color="rgb(96.405029%, 65.632629%, 84.684753%)" offset="0.0976562"/><stop stop-opacity="1" stop-color="rgb(96.205139%, 65.467834%, 84.706116%)" offset="0.101562"/><stop stop-opacity="1" stop-color="rgb(96.003723%, 65.301514%, 84.727478%)" offset="0.105469"/><stop stop-opacity="1" stop-color="rgb(95.803833%, 65.136719%, 84.750366%)" offset="0.109375"/><stop stop-opacity="1" stop-color="rgb(95.602417%, 64.970398%, 84.771729%)" offset="0.113281"/><stop stop-opacity="1" stop-color="rgb(95.402527%, 64.805603%, 84.793091%)" offset="0.117188"/><stop stop-opacity="1" stop-color="rgb(95.202637%, 64.639282%, 84.814453%)" offset="0.121094"/><stop stop-opacity="1" stop-color="rgb(95.002747%, 64.474487%, 84.835815%)" offset="0.125"/><stop stop-opacity="1" stop-color="rgb(94.801331%, 64.309692%, 84.857178%)" offset="0.128906"/><stop stop-opacity="1" stop-color="rgb(94.60144%, 64.144897%, 84.87854%)" offset="0.132812"/><stop stop-opacity="1" stop-color="rgb(94.400024%, 63.978577%, 84.899902%)" offset="0.136719"/><stop stop-opacity="1" stop-color="rgb(94.200134%, 63.813782%, 84.921265%)" offset="0.140625"/><stop stop-opacity="1" stop-color="rgb(93.998718%, 63.647461%, 84.942627%)" offset="0.144531"/><stop stop-opacity="1" stop-color="rgb(93.798828%, 63.482666%, 84.965515%)" offset="0.148437"/><stop stop-opacity="1" stop-color="rgb(93.597412%, 63.316345%, 84.986877%)" offset="0.152344"/><stop stop-opacity="1" stop-color="rgb(93.397522%, 63.15155%, 85.00824%)" offset="0.15625"/><stop stop-opacity="1" stop-color="rgb(93.196106%, 62.985229%, 85.029602%)" offset="0.160156"/><stop stop-opacity="1" stop-color="rgb(92.996216%, 62.820435%, 85.050964%)" offset="0.164062"/><stop stop-opacity="1" stop-color="rgb(92.796326%, 62.654114%, 85.072327%)" offset="0.167969"/><stop stop-opacity="1" stop-color="rgb(92.596436%, 62.489319%, 85.093689%)" offset="0.171875"/><stop stop-opacity="1" stop-color="rgb(92.39502%, 62.322998%, 85.115051%)" offset="0.175781"/><stop stop-opacity="1" stop-color="rgb(92.195129%, 62.158203%, 85.137939%)" offset="0.179687"/><stop stop-opacity="1" stop-color="rgb(91.993713%, 61.991882%, 85.159302%)" offset="0.183594"/><stop stop-opacity="1" stop-color="rgb(91.793823%, 61.827087%, 85.180664%)" offset="0.1875"/><stop stop-opacity="1" stop-color="rgb(91.592407%, 61.660767%, 85.202026%)" offset="0.191406"/><stop stop-opacity="1" stop-color="rgb(91.392517%, 61.495972%, 85.223389%)" offset="0.195312"/><stop stop-opacity="1" stop-color="rgb(91.191101%, 61.331177%, 85.244751%)" offset="0.199219"/><stop stop-opacity="1" stop-color="rgb(90.991211%, 61.166382%, 85.266113%)" offset="0.203125"/><stop stop-opacity="1" stop-color="rgb(90.791321%, 61.000061%, 85.287476%)" offset="0.207031"/><stop stop-opacity="1" stop-color="rgb(90.591431%, 60.835266%, 85.308838%)" offset="0.210937"/><stop stop-opacity="1" stop-color="rgb(90.390015%, 60.668945%, 85.3302%)" offset="0.214844"/><stop stop-opacity="1" stop-color="rgb(90.190125%, 60.50415%, 85.353088%)" offset="0.21875"/><stop stop-opacity="1" stop-color="rgb(89.988708%, 60.33783%, 85.374451%)" offset="0.222656"/><stop stop-opacity="1" stop-color="rgb(89.788818%, 60.173035%, 85.395813%)" offset="0.226562"/><stop stop-opacity="1" stop-color="rgb(89.587402%, 60.006714%, 85.417175%)" offset="0.230469"/><stop stop-opacity="1" stop-color="rgb(89.387512%, 59.841919%, 85.438538%)" offset="0.234375"/><stop stop-opacity="1" stop-color="rgb(89.186096%, 59.675598%, 85.4599%)" offset="0.238281"/><stop stop-opacity="1" stop-color="rgb(88.986206%, 59.510803%, 85.481262%)" offset="0.242187"/><stop stop-opacity="1" stop-color="rgb(88.78479%, 59.344482%, 85.502625%)" offset="0.246094"/><stop stop-opacity="1" stop-color="rgb(88.5849%, 59.179688%, 85.523987%)" offset="0.25"/><stop stop-opacity="1" stop-color="rgb(88.38501%, 59.013367%, 85.545349%)" offset="0.253906"/><stop stop-opacity="1" stop-color="rgb(88.18512%, 58.848572%, 85.568237%)" offset="0.257812"/><stop stop-opacity="1" stop-color="rgb(87.983704%, 58.682251%, 85.5896%)" offset="0.261719"/><stop stop-opacity="1" stop-color="rgb(87.783813%, 58.517456%, 85.610962%)" offset="0.265625"/><stop stop-opacity="1" stop-color="rgb(87.582397%, 58.351135%, 85.632324%)" offset="0.269531"/><stop stop-opacity="1" stop-color="rgb(87.382507%, 58.18634%, 85.653687%)" offset="0.273437"/><stop stop-opacity="1" stop-color="rgb(87.181091%, 58.021545%, 85.675049%)" offset="0.277344"/><stop stop-opacity="1" stop-color="rgb(86.981201%, 57.85675%, 85.696411%)" offset="0.28125"/><stop stop-opacity="1" stop-color="rgb(86.779785%, 57.69043%, 85.717773%)" offset="0.285156"/><stop stop-opacity="1" stop-color="rgb(86.579895%, 57.525635%, 85.740662%)" offset="0.289062"/><stop stop-opacity="1" stop-color="rgb(86.378479%, 57.359314%, 85.762024%)" offset="0.292969"/><stop stop-opacity="1" stop-color="rgb(86.178589%, 57.194519%, 85.783386%)" offset="0.296875"/><stop stop-opacity="1" stop-color="rgb(85.978699%, 57.028198%, 85.804749%)" offset="0.300781"/><stop stop-opacity="1" stop-color="rgb(85.778809%, 56.863403%, 85.826111%)" offset="0.304687"/><stop stop-opacity="1" stop-color="rgb(85.577393%, 56.697083%, 85.847473%)" offset="0.308594"/><stop stop-opacity="1" stop-color="rgb(85.377502%, 56.532288%, 85.868835%)" offset="0.3125"/><stop stop-opacity="1" stop-color="rgb(85.176086%, 56.365967%, 85.890198%)" offset="0.316406"/><stop stop-opacity="1" stop-color="rgb(84.976196%, 56.201172%, 85.91156%)" offset="0.320312"/><stop stop-opacity="1" stop-color="rgb(84.77478%, 56.034851%, 85.932922%)" offset="0.324219"/><stop stop-opacity="1" stop-color="rgb(84.57489%, 55.870056%, 85.955811%)" offset="0.328125"/><stop stop-opacity="1" stop-color="rgb(84.373474%, 55.703735%, 85.977173%)" offset="0.332031"/><stop stop-opacity="1" stop-color="rgb(84.173584%, 55.53894%, 85.998535%)" offset="0.335937"/><stop stop-opacity="1" stop-color="rgb(83.973694%, 55.37262%, 86.019897%)" offset="0.339844"/><stop stop-opacity="1" stop-color="rgb(83.773804%, 55.207825%, 86.04126%)" offset="0.34375"/><stop stop-opacity="1" stop-color="rgb(83.572388%, 55.04303%, 86.062622%)" offset="0.347656"/><stop stop-opacity="1" stop-color="rgb(83.372498%, 54.878235%, 86.083984%)" offset="0.351562"/><stop stop-opacity="1" stop-color="rgb(83.171082%, 54.711914%, 86.105347%)" offset="0.355469"/><stop stop-opacity="1" stop-color="rgb(82.971191%, 54.547119%, 86.128235%)" offset="0.359375"/><stop stop-opacity="1" stop-color="rgb(82.769775%, 54.380798%, 86.149597%)" offset="0.363281"/><stop stop-opacity="1" stop-color="rgb(82.569885%, 54.216003%, 86.170959%)" offset="0.367187"/><stop stop-opacity="1" stop-color="rgb(82.368469%, 54.049683%, 86.192322%)" offset="0.371094"/><stop stop-opacity="1" stop-color="rgb(82.168579%, 53.884888%, 86.213684%)" offset="0.375"/><stop stop-opacity="1" stop-color="rgb(81.967163%, 53.718567%, 86.235046%)" offset="0.378906"/><stop stop-opacity="1" stop-color="rgb(81.767273%, 53.553772%, 86.256409%)" offset="0.382812"/><stop stop-opacity="1" stop-color="rgb(81.567383%, 53.387451%, 86.277771%)" offset="0.386719"/><stop stop-opacity="1" stop-color="rgb(81.367493%, 53.222656%, 86.299133%)" offset="0.390625"/><stop stop-opacity="1" stop-color="rgb(81.166077%, 53.056335%, 86.320496%)" offset="0.394531"/><stop stop-opacity="1" stop-color="rgb(80.966187%, 52.891541%, 86.343384%)" offset="0.398437"/><stop stop-opacity="1" stop-color="rgb(80.764771%, 52.72522%, 86.364746%)" offset="0.402344"/><stop stop-opacity="1" stop-color="rgb(80.56488%, 52.560425%, 86.386108%)" offset="0.40625"/><stop stop-opacity="1" stop-color="rgb(80.363464%, 52.394104%, 86.407471%)" offset="0.410156"/><stop stop-opacity="1" stop-color="rgb(80.163574%, 52.229309%, 86.428833%)" offset="0.414062"/><stop stop-opacity="1" stop-color="rgb(79.962158%, 52.062988%, 86.450195%)" offset="0.417969"/><stop stop-opacity="1" stop-color="rgb(79.762268%, 51.898193%, 86.471558%)" offset="0.421875"/><stop stop-opacity="1" stop-color="rgb(79.562378%, 51.733398%, 86.49292%)" offset="0.425781"/><stop stop-opacity="1" stop-color="rgb(79.362488%, 51.568604%, 86.515808%)" offset="0.429687"/><stop stop-opacity="1" stop-color="rgb(79.161072%, 51.402283%, 86.53717%)" offset="0.433594"/><stop stop-opacity="1" stop-color="rgb(78.961182%, 51.237488%, 86.558533%)" offset="0.4375"/><stop stop-opacity="1" stop-color="rgb(78.759766%, 51.071167%, 86.579895%)" offset="0.441406"/><stop stop-opacity="1" stop-color="rgb(78.559875%, 50.906372%, 86.601257%)" offset="0.445312"/><stop stop-opacity="1" stop-color="rgb(78.358459%, 50.740051%, 86.62262%)" offset="0.449219"/><stop stop-opacity="1" stop-color="rgb(78.158569%, 50.575256%, 86.643982%)" offset="0.453125"/><stop stop-opacity="1" stop-color="rgb(77.957153%, 50.408936%, 86.665344%)" offset="0.457031"/><stop stop-opacity="1" stop-color="rgb(77.757263%, 50.244141%, 86.686707%)" offset="0.460937"/><stop stop-opacity="1" stop-color="rgb(77.555847%, 50.07782%, 86.708069%)" offset="0.464844"/><stop stop-opacity="1" stop-color="rgb(77.355957%, 49.913025%, 86.730957%)" offset="0.46875"/><stop stop-opacity="1" stop-color="rgb(77.156067%, 49.746704%, 86.752319%)" offset="0.472656"/><stop stop-opacity="1" stop-color="rgb(76.956177%, 49.581909%, 86.773682%)" offset="0.476562"/><stop stop-opacity="1" stop-color="rgb(76.754761%, 49.415588%, 86.795044%)" offset="0.480469"/><stop stop-opacity="1" stop-color="rgb(76.554871%, 49.250793%, 86.816406%)" offset="0.484375"/><stop stop-opacity="1" stop-color="rgb(76.353455%, 49.084473%, 86.837769%)" offset="0.488281"/><stop stop-opacity="1" stop-color="rgb(76.153564%, 48.919678%, 86.859131%)" offset="0.492187"/><stop stop-opacity="1" stop-color="rgb(75.952148%, 48.753357%, 86.880493%)" offset="0.496094"/><stop stop-opacity="1" stop-color="rgb(75.752258%, 48.588562%, 86.901855%)" offset="0.5"/><stop stop-opacity="1" stop-color="rgb(75.550842%, 48.423767%, 86.923218%)" offset="0.503906"/><stop stop-opacity="1" stop-color="rgb(75.350952%, 48.258972%, 86.946106%)" offset="0.507812"/><stop stop-opacity="1" stop-color="rgb(75.151062%, 48.092651%, 86.967468%)" offset="0.511719"/><stop stop-opacity="1" stop-color="rgb(74.951172%, 47.927856%, 86.988831%)" offset="0.515625"/><stop stop-opacity="1" stop-color="rgb(74.749756%, 47.761536%, 87.010193%)" offset="0.519531"/><stop stop-opacity="1" stop-color="rgb(74.549866%, 47.596741%, 87.031555%)" offset="0.523438"/><stop stop-opacity="1" stop-color="rgb(74.34845%, 47.43042%, 87.052917%)" offset="0.527344"/><stop stop-opacity="1" stop-color="rgb(74.14856%, 47.265625%, 87.07428%)" offset="0.53125"/><stop stop-opacity="1" stop-color="rgb(73.947144%, 47.099304%, 87.095642%)" offset="0.535156"/><stop stop-opacity="1" stop-color="rgb(73.747253%, 46.934509%, 87.11853%)" offset="0.539062"/><stop stop-opacity="1" stop-color="rgb(73.545837%, 46.768188%, 87.139893%)" offset="0.542969"/><stop stop-opacity="1" stop-color="rgb(73.345947%, 46.603394%, 87.161255%)" offset="0.546875"/><stop stop-opacity="1" stop-color="rgb(73.144531%, 46.437073%, 87.182617%)" offset="0.550781"/><stop stop-opacity="1" stop-color="rgb(72.944641%, 46.272278%, 87.203979%)" offset="0.554688"/><stop stop-opacity="1" stop-color="rgb(72.744751%, 46.105957%, 87.225342%)" offset="0.558594"/><stop stop-opacity="1" stop-color="rgb(72.544861%, 45.941162%, 87.246704%)" offset="0.5625"/><stop stop-opacity="1" stop-color="rgb(72.343445%, 45.774841%, 87.268066%)" offset="0.566406"/><stop stop-opacity="1" stop-color="rgb(72.143555%, 45.610046%, 87.289429%)" offset="0.570312"/><stop stop-opacity="1" stop-color="rgb(71.942139%, 45.445251%, 87.310791%)" offset="0.574219"/><stop stop-opacity="1" stop-color="rgb(71.742249%, 45.280457%, 87.333679%)" offset="0.578125"/><stop stop-opacity="1" stop-color="rgb(71.540833%, 45.114136%, 87.355042%)" offset="0.582031"/><stop stop-opacity="1" stop-color="rgb(71.340942%, 44.949341%, 87.376404%)" offset="0.585938"/><stop stop-opacity="1" stop-color="rgb(71.139526%, 44.78302%, 87.397766%)" offset="0.589844"/><stop stop-opacity="1" stop-color="rgb(70.939636%, 44.618225%, 87.419128%)" offset="0.59375"/><stop stop-opacity="1" stop-color="rgb(70.73822%, 44.451904%, 87.440491%)" offset="0.597656"/><stop stop-opacity="1" stop-color="rgb(70.53833%, 44.287109%, 87.461853%)" offset="0.601562"/><stop stop-opacity="1" stop-color="rgb(70.33844%, 44.120789%, 87.483215%)" offset="0.605469"/><stop stop-opacity="1" stop-color="rgb(70.13855%, 43.955994%, 87.506104%)" offset="0.609375"/><stop stop-opacity="1" stop-color="rgb(69.937134%, 43.789673%, 87.527466%)" offset="0.613281"/><stop stop-opacity="1" stop-color="rgb(69.737244%, 43.624878%, 87.548828%)" offset="0.617188"/><stop stop-opacity="1" stop-color="rgb(69.535828%, 43.458557%, 87.57019%)" offset="0.621094"/><stop stop-opacity="1" stop-color="rgb(69.335938%, 43.293762%, 87.591553%)" offset="0.625"/><stop stop-opacity="1" stop-color="rgb(69.134521%, 43.127441%, 87.612915%)" offset="0.628906"/><stop stop-opacity="1" stop-color="rgb(68.934631%, 42.962646%, 87.634277%)" offset="0.632812"/><stop stop-opacity="1" stop-color="rgb(68.733215%, 42.796326%, 87.65564%)" offset="0.636719"/><stop stop-opacity="1" stop-color="rgb(68.533325%, 42.631531%, 87.677002%)" offset="0.640625"/><stop stop-opacity="1" stop-color="rgb(68.333435%, 42.46521%, 87.698364%)" offset="0.644531"/><stop stop-opacity="1" stop-color="rgb(68.133545%, 42.300415%, 87.721252%)" offset="0.648438"/><stop stop-opacity="1" stop-color="rgb(67.932129%, 42.13562%, 87.742615%)" offset="0.652344"/><stop stop-opacity="1" stop-color="rgb(67.732239%, 41.970825%, 87.763977%)" offset="0.65625"/><stop stop-opacity="1" stop-color="rgb(67.530823%, 41.804504%, 87.785339%)" offset="0.660156"/><stop stop-opacity="1" stop-color="rgb(67.330933%, 41.639709%, 87.806702%)" offset="0.664062"/><stop stop-opacity="1" stop-color="rgb(67.129517%, 41.473389%, 87.828064%)" offset="0.667969"/><stop stop-opacity="1" stop-color="rgb(66.929626%, 41.308594%, 87.849426%)" offset="0.671875"/><stop stop-opacity="1" stop-color="rgb(66.72821%, 41.142273%, 87.870789%)" offset="0.675781"/><stop stop-opacity="1" stop-color="rgb(66.52832%, 40.977478%, 87.892151%)" offset="0.679688"/><stop stop-opacity="1" stop-color="rgb(66.326904%, 40.811157%, 87.913513%)" offset="0.683594"/><stop stop-opacity="1" stop-color="rgb(66.127014%, 40.646362%, 87.936401%)" offset="0.6875"/><stop stop-opacity="1" stop-color="rgb(65.927124%, 40.480042%, 87.957764%)" offset="0.691406"/><stop stop-opacity="1" stop-color="rgb(65.727234%, 40.315247%, 87.979126%)" offset="0.695312"/><stop stop-opacity="1" stop-color="rgb(65.525818%, 40.148926%, 88.000488%)" offset="0.699219"/><stop stop-opacity="1" stop-color="rgb(65.325928%, 39.984131%, 88.021851%)" offset="0.703125"/><stop stop-opacity="1" stop-color="rgb(65.124512%, 39.81781%, 88.043213%)" offset="0.707031"/><stop stop-opacity="1" stop-color="rgb(64.924622%, 39.653015%, 88.064575%)" offset="0.710938"/><stop stop-opacity="1" stop-color="rgb(64.723206%, 39.486694%, 88.085938%)" offset="0.714844"/><stop stop-opacity="1" stop-color="rgb(64.523315%, 39.321899%, 88.108826%)" offset="0.71875"/><stop stop-opacity="1" stop-color="rgb(64.321899%, 39.157104%, 88.130188%)" offset="0.722656"/><stop stop-opacity="1" stop-color="rgb(64.122009%, 38.99231%, 88.15155%)" offset="0.726562"/><stop stop-opacity="1" stop-color="rgb(63.922119%, 38.825989%, 88.172913%)" offset="0.730469"/><stop stop-opacity="1" stop-color="rgb(63.722229%, 38.661194%, 88.194275%)" offset="0.734375"/><stop stop-opacity="1" stop-color="rgb(63.520813%, 38.494873%, 88.215637%)" offset="0.738281"/><stop stop-opacity="1" stop-color="rgb(63.320923%, 38.330078%, 88.237%)" offset="0.742187"/><stop stop-opacity="1" stop-color="rgb(63.119507%, 38.163757%, 88.258362%)" offset="0.746094"/><stop stop-opacity="1" stop-color="rgb(62.919617%, 37.998962%, 88.279724%)" offset="0.75"/><stop stop-opacity="1" stop-color="rgb(62.718201%, 37.832642%, 88.301086%)" offset="0.753906"/><stop stop-opacity="1" stop-color="rgb(62.518311%, 37.667847%, 88.323975%)" offset="0.757812"/><stop stop-opacity="1" stop-color="rgb(62.316895%, 37.501526%, 88.345337%)" offset="0.761719"/><stop stop-opacity="1" stop-color="rgb(62.117004%, 37.336731%, 88.366699%)" offset="0.765625"/><stop stop-opacity="1" stop-color="rgb(61.915588%, 37.17041%, 88.388062%)" offset="0.769531"/><stop stop-opacity="1" stop-color="rgb(61.715698%, 37.005615%, 88.409424%)" offset="0.773437"/><stop stop-opacity="1" stop-color="rgb(61.515808%, 36.839294%, 88.430786%)" offset="0.777344"/><stop stop-opacity="1" stop-color="rgb(61.315918%, 36.6745%, 88.452148%)" offset="0.78125"/><stop stop-opacity="1" stop-color="rgb(61.114502%, 36.508179%, 88.473511%)" offset="0.785156"/><stop stop-opacity="1" stop-color="rgb(60.914612%, 36.343384%, 88.496399%)" offset="0.789062"/><stop stop-opacity="1" stop-color="rgb(60.713196%, 36.177063%, 88.517761%)" offset="0.792969"/><stop stop-opacity="1" stop-color="rgb(60.513306%, 36.012268%, 88.539124%)" offset="0.796875"/><stop stop-opacity="1" stop-color="rgb(60.31189%, 35.847473%, 88.560486%)" offset="0.800781"/><stop stop-opacity="1" stop-color="rgb(60.112%, 35.682678%, 88.581848%)" offset="0.804687"/><stop stop-opacity="1" stop-color="rgb(59.910583%, 35.516357%, 88.60321%)" offset="0.808594"/><stop stop-opacity="1" stop-color="rgb(59.710693%, 35.351562%, 88.624573%)" offset="0.8125"/><stop stop-opacity="1" stop-color="rgb(59.510803%, 35.185242%, 88.645935%)" offset="0.816406"/><stop stop-opacity="1" stop-color="rgb(59.310913%, 35.020447%, 88.667297%)" offset="0.820312"/><stop stop-opacity="1" stop-color="rgb(59.109497%, 34.854126%, 88.68866%)" offset="0.824219"/><stop stop-opacity="1" stop-color="rgb(58.909607%, 34.689331%, 88.711548%)" offset="0.828125"/><stop stop-opacity="1" stop-color="rgb(58.708191%, 34.52301%, 88.73291%)" offset="0.832031"/><stop stop-opacity="1" stop-color="rgb(58.508301%, 34.358215%, 88.754272%)" offset="0.835937"/><stop stop-opacity="1" stop-color="rgb(58.306885%, 34.191895%, 88.775635%)" offset="0.839844"/><stop stop-opacity="1" stop-color="rgb(58.106995%, 34.0271%, 88.796997%)" offset="0.84375"/><stop stop-opacity="1" stop-color="rgb(57.905579%, 33.860779%, 88.818359%)" offset="0.847656"/><stop stop-opacity="1" stop-color="rgb(57.705688%, 33.695984%, 88.839722%)" offset="0.851562"/><stop stop-opacity="1" stop-color="rgb(57.504272%, 33.529663%, 88.861084%)" offset="0.855469"/><stop stop-opacity="1" stop-color="rgb(57.304382%, 33.364868%, 88.883972%)" offset="0.859375"/><stop stop-opacity="1" stop-color="rgb(57.104492%, 33.198547%, 88.905334%)" offset="0.863281"/><stop stop-opacity="1" stop-color="rgb(56.904602%, 33.033752%, 88.926697%)" offset="0.867187"/><stop stop-opacity="1" stop-color="rgb(56.703186%, 32.867432%, 88.948059%)" offset="0.871094"/><stop stop-opacity="1" stop-color="rgb(56.503296%, 32.702637%, 88.969421%)" offset="0.875"/><stop stop-opacity="1" stop-color="rgb(56.30188%, 32.537842%, 88.990784%)" offset="0.878906"/><stop stop-opacity="1" stop-color="rgb(56.10199%, 32.373047%, 89.012146%)" offset="0.882812"/><stop stop-opacity="1" stop-color="rgb(55.900574%, 32.206726%, 89.033508%)" offset="0.886719"/><stop stop-opacity="1" stop-color="rgb(55.700684%, 32.041931%, 89.054871%)" offset="0.890625"/><stop stop-opacity="1" stop-color="rgb(55.499268%, 31.87561%, 89.076233%)" offset="0.894531"/><stop stop-opacity="1" stop-color="rgb(55.299377%, 31.710815%, 89.099121%)" offset="0.898437"/><stop stop-opacity="1" stop-color="rgb(55.099487%, 31.544495%, 89.120483%)" offset="0.902344"/><stop stop-opacity="1" stop-color="rgb(54.899597%, 31.3797%, 89.141846%)" offset="0.90625"/><stop stop-opacity="1" stop-color="rgb(54.698181%, 31.213379%, 89.163208%)" offset="0.910156"/><stop stop-opacity="1" stop-color="rgb(54.498291%, 31.048584%, 89.18457%)" offset="0.914062"/><stop stop-opacity="1" stop-color="rgb(54.296875%, 30.882263%, 89.205933%)" offset="0.917969"/><stop stop-opacity="1" stop-color="rgb(54.096985%, 30.717468%, 89.227295%)" offset="0.921875"/><stop stop-opacity="1" stop-color="rgb(53.895569%, 30.551147%, 89.248657%)" offset="0.925781"/><stop stop-opacity="1" stop-color="rgb(53.695679%, 30.386353%, 89.27002%)" offset="0.929688"/><stop stop-opacity="1" stop-color="rgb(53.494263%, 30.220032%, 89.291382%)" offset="0.933594"/><stop stop-opacity="1" stop-color="rgb(53.294373%, 30.055237%, 89.31427%)" offset="0.9375"/><stop stop-opacity="1" stop-color="rgb(53.092957%, 29.888916%, 89.335632%)" offset="0.941406"/><stop stop-opacity="1" stop-color="rgb(52.893066%, 29.724121%, 89.356995%)" offset="0.945312"/><stop stop-opacity="1" stop-color="rgb(52.696228%, 29.560852%, 89.378357%)" offset="0.949219"/><stop stop-opacity="1" stop-color="rgb(52.49939%, 29.399109%, 89.399719%)" offset="0.953125"/><stop stop-opacity="1" stop-color="rgb(52.49939%, 29.399109%, 89.399719%)" offset="0.96875"/><stop stop-opacity="1" stop-color="rgb(52.49939%, 29.399109%, 89.399719%)" offset="1"/></linearGradient></defs><g clip-path="url(#11d6cf8455)"><g clip-path="url(#46be7fe50b)"><path fill="url(#5b6ac9d674)" d="M 674.339844 729.628906 L 0 729.628906 L 0 0 L 674.339844 0 Z M 674.339844 729.628906 " fill-rule="nonzero"/></g></g></svg>
+    </div>
+    
+    <div
+      class="relative px-4 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-14 z-20">
+      <div class="max-w-xl mb-10 mx-auto text-center lg:max-w-2xl md:mb-12">
+        <h2
+          class="max-w-lg mb-6  text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+
+          Affordable for everyone
+        </h2>
+        <p class="text-base text-gray-700 md:text-lg ">
+          Protect the integrity of your classroom with our ChatGPT AI detection technology.
+        </p>
+      </div>
+      <div class="grid max-w-screen-md gap-10 md:grid-cols-2 sm:mx-auto">
+        <div>
+          <div class="p-8 bg-gray-900 rounded">
+            <div class="mb-4 text-center">
+              <p class="text-xl font-medium tracking-wide text-white">
+                Personal Plan
+              </p>
+              <div class="flex items-center justify-center">
+                <p class="mr-2 text-5xl font-semibold text-white lg:text-6xl">
+                  $0
+                </p>
+                <p class="text-lg text-gray-500">/ month</p>
+              </div>
+            </div>
+            <ul class="mb-8 space-y-2">
+              <li class="flex items-center">
+                <div class="mr-3">
+                  <svg class="w-4 h-4 text-fuchsia-600" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                    <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                    <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                  </svg>
+                </div>
+                <p class="font-medium text-gray-300">Detects ChatGPT Content</p>
+              </li>
+              <li class="flex items-center">
+                <div class="mr-3">
+                  <svg class="w-4 h-4 text-fuchsia-600" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                    <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                    <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                  </svg>
+                </div>
+                <p class="font-medium text-gray-300">Authenticity score</p>
+              </li>
+              <li class="flex items-center">
+                <div class="mr-3">
+                  <svg class="w-4 h-4 text-fuchsia-600" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                    <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                    <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                  </svg>
+                </div>
+                <p class="font-medium text-gray-300">Easy integration through Chrome and Edge</p>
+              </li>
+              <li class="flex items-center">
+                <div class="mr-3">
+                  <svg class="w-4 h-4 text-fuchsia-600" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                    <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                    <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                  </svg>
+                </div>
+                <p class="font-medium text-gray-300">Immediate results</p>
+              </li>
+            </ul>
+            <a href="/accounts/signup/"
+            class=" inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-white bg-gradient transition duration-200 rounded shadow-md bg-teal-accent-400 hover:bg-gradient-to-l focus:shadow-outline focus:outline-none hover:scale-[1.02]">
+              Get it now
+          </a>
+          </div>
+          <div class="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75"></div>
+          <div class="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50"></div>
+          <div class="w-9/12 h-2 mx-auto bg-gray-900 rounded-b opacity-25"></div>
+        </div>
+        <div>
+          <div class="p-8 bg-gray-900 rounded">
+            <div class="mb-4 text-center">
+              <p class="text-xl font-medium tracking-wide text-white">For Your School</p>
+              <div class="flex items-center justify-center">
+                
+                <p class="text-xl font-semibold text-gray-500 lg:text-2xl py-2">
+                  Get a Quote!
+                </p>
+              </div>
+            </div>
+            <ul class="mb-8 space-y-2">
+              <li class="flex items-center">
+                <div class="mr-3">
+                  <svg class="w-4 h-4 text-fuchsia-600" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                    <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                    <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                  </svg>
+                </div>
+                <p class="font-medium text-gray-300">Detect ChatGPT and traditional plagiarism</p>
+              </li>
+              <li class="flex items-center">
+                <div class="mr-3">
+                  <svg class="w-4 h-4 text-fuchsia-600" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                    <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                    <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                  </svg>
+                </div>
+                <p class="font-medium text-gray-300">Advanced authenticity report</p>
+              </li>
+              <li class="flex items-center">
+                <div class="mr-3">
+                  <svg class="w-4 h-4 text-fuchsia-600" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                    <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                    <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                  </svg>
+                </div>
+                <p class="font-medium text-gray-300">Google Education Integration</p>
+              </li>
+              <li class="flex items-center">
+                <div class="mr-3">
+                  <svg class="w-4 h-4 text-fuchsia-600" viewBox="0 0 24 24" stroke-linecap="round" stroke-width="2">
+                    <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8"></polyline>
+                    <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
+                  </svg>
+                </div>
+                <p class="font-medium text-gray-300">Bulk student reports</p>
+              </li>
+            </ul>
+            <a href="mailto:percenthumanai@gmail.com?subject=Request for more information"
+            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none hover:scale-[1.02]">
+              Contact Sales
+          </a>
+          </div>
+          <div class="w-11/12 h-2 mx-auto bg-gray-900 rounded-b opacity-75"></div>
+          <div class="w-10/12 h-2 mx-auto bg-gray-900 rounded-b opacity-50"></div>
+          <div class="w-9/12 h-2 mx-auto bg-gray-900 rounded-b opacity-25"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<div id="faq">
+  <div class="mx-auto max-w-screen-xl pt-8 pb-8 md:pb-24 md:pt-14 px-3 md:px-24 justify-center items-center ">
+    <div class="pb-5 md:pb-10 flex justify-center">
+      <span class="text-4xl font-bold leading-none tracking-tight text-center">Frequently Asked Questions</span>
+    </div>
+    <div id="accordion-collapse" data-accordion="collapse">
+      <h2 id="accordion-collapse-heading-1">
+        <button type="button"
+          class="flex items-center focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 justify-between p-5 w-full font-medium text-left border border-gray-200 dark:border-gray-700 border-b-0 text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-t-xl"
+          data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+          aria-controls="accordion-collapse-body-1">
+          <span>What is Percent Human?</span>
+          <svg data-accordion-icon class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-collapse-body-1" aria-labelledby="accordion-collapse-heading-1">
+        <div class="p-5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900 border-b-0">
+          <p class="mb-2 text-gray-600 dark:text-gray-400">
+            Percent Human is a education tool that has developed an artificial intelligence (AI) model that can detect
+            when students use AI like ChatGPT on their schoolwork. The tool helps educators maintain the integrity of the educational system and ensure that students are submitting
+            original work that they have done themselves.
+
+          </p>
+        </div>
+      </div>
+      <h2 id="accordion-collapse-heading-9">
+        <button type="button"
+          class="flex items-center border focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border-gray-200 dark:border-gray-700 justify-between p-5 w-full font-medium text-left text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-collapse-body-9" aria-expanded="false"
+          aria-controls="accordion-collapse-body-9">
+          <span>How to use the Percent Human Extension
+          </span>
+          <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-collapse-body-9" class="hidden" aria-labelledby="accordion-collapse-heading-9">
+        <div class="p-5 border border-gray-200 dark:border-gray-700 border-t-0">
+          <p class="mb-2 text-gray-500 dark:text-gray-400">To detect AI in student work, select the student response, click the extension, and instantly get the authenticity report. Works across all websites and types of student work.</p>
+        </div>
+      </div>
+      <h2 id="accordion-collapse-heading-0">
+        <button type="button"
+          class="flex items-center focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 justify-between p-5 w-full font-medium text-left border border-gray-200 dark:border-gray-700 border-b-0 text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-collapse-body-0" aria-expanded="true"
+          aria-controls="accordion-collapse-body-0">
+          <span>What is the purpose of the AI Content detector?
+          </span>
+          <svg data-accordion-icon class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-collapse-body-0" aria-labelledby="accordion-collapse-heading-0">
+        <div class="p-5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900 border-b-0">
+          <p class="mb-2 text-gray-600 dark:text-gray-400">The purpose of the AI detector is to help educators identify
+            when students have used AI sources such as ChatGPT, GPT-3 and others on their schoolwork, so that they can take appropriate
+            action. The AI detector is a tool that helps educators ensure that students are held accountable for their own work and that the educational system is fair for all students.
+
+          </p>
+        </div>
+      </div>
+      <h2 id="accordion-collapse-heading-2">
+        <button type="button"
+          class="flex items-center focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 justify-between p-5 w-full font-medium border border-gray-200 dark:border-gray-700 border-b-0 text-left text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+          aria-controls="accordion-collapse-body-2">
+          <span>How accurate is the AI Content detector?</span>
+          <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+        <div class="p-5 border border-gray-200 dark:border-gray-700 border-b-0">
+          <p class="mb-2 text-gray-500 dark:text-gray-400">We use Machine Learning -a branch of Artificial Intelligence
+            - to provide our advanced authenticity report. On over 5,000 real student samples and 10,000 ChatGPT
+            samples, it is 95% accurate at detecting the use of ChatGPT and GPT-3 on student work. 
+            
+          </p>
+          <p class="mb-2 text-gray-500 dark:text-gray-400">This high level of accuracy ensures that educators can trust the results of the AI detector.
+          </p>
+          <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about our technology:</p>
+          <ul class="list-disc pl-5 dark:text-gray-400 text-gray-500">
+            <li><a href="/" class="text-fuchsia-600 dark:text-green-500 hover:underline">Percent Humans's AI Detection
+                Model</a></li>
+          </ul>
+        </div>
+      </div>
+      <h2 id="accordion-collapse-heading-3">
+        <button type="button"
+          class="flex items-center border focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border-gray-200 dark:border-gray-700 justify-between p-5 w-full font-medium text-left text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
+          aria-controls="accordion-collapse-body-3">
+          <span>How can educators use the AI detector?
+          </span>
+          <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+        <div class="p-5 border border-gray-200 dark:border-gray-700 border-t-0">
+          <p class="mb-2 text-gray-500 dark:text-gray-400">Educators can use the AI detector to detect and prevent cheating, by running the AI detector on all student's work before grading them.
+
+          </p>
+
+        </div>
+      </div>
+      <h2 id="accordion-collapse-heading-5">
+        <button type="button"
+          class="flex items-center border focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border-gray-200 dark:border-gray-700 justify-between p-5 w-full font-medium text-left text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-collapse-body-5" aria-expanded="false"
+          aria-controls="accordion-collapse-body-5">
+          <span>How does the AI detector work?
+          </span>
+          <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+        <div class="p-5 border border-gray-200 dark:border-gray-700 border-t-0">
+          <p class="mb-2 text-gray-500 dark:text-gray-400">The AI detector works by analyzing the language and style used in a piece of text and comparing it to a database of known language generation models like ChatGPT and GPT-3. 
+          </p>
+          <p class="mb-2 text-gray-500 dark:text-gray-400">This analysis is done using sophisticated machine learning algorithms that have been trained on a large dataset of samples.
+          </p>
+        </div>
+      </div>
+
+      <h2 id="accordion-collapse-heading-7">
+        <button type="button"
+          class="flex items-center border focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border-gray-200 dark:border-gray-700 justify-between p-5 w-full font-medium text-left text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-collapse-body-7" aria-expanded="false"
+          aria-controls="accordion-collapse-body-7">
+          <span>Is there a free version of the AI detector available?
+          </span>
+          <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-collapse-body-7" class="hidden" aria-labelledby="accordion-collapse-heading-7">
+        <div class="p-5 border border-gray-200 dark:border-gray-700 border-t-0">
+          <p class="mb-2 text-gray-500 dark:text-gray-400">Yes! Percent Human offers a free version to users to
+            try out the tool and see if it meets their needs and expectations. 
+
+          </p>
+        </div>
+      </div>
+      <h2 id="accordion-collapse-heading-8">
+        <button type="button"
+          class="flex items-center border focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border-gray-200 dark:border-gray-700 justify-between p-5 w-full font-medium text-left text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-collapse-body-8" aria-expanded="false"
+          aria-controls="accordion-collapse-body-8">
+          <span>Is Percent Human available on all devices?
+          </span>
+          <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </h2>
+      <div id="accordion-collapse-body-8" class="hidden" aria-labelledby="accordion-collapse-heading-8">
+        <div class="p-5 border border-gray-200 dark:border-gray-700 border-t-0">
+          <p class="mb-2 text-gray-500 dark:text-gray-400">Yes, Percent Human is available on all devices on the Chrome Web Store and Microsoft Edge Store.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+  
+
+  <footer class="px-8 py-8 sm:py-20 bg-black justify-center">
+    <div class="container flex flex-wrap items-center justify-between mx-auto md:gap-0 gap-4">
+
+      <a href="/" class="inline-flex group items-center justify-center">
+        <img class="md:h-15 h-8 mr-3" src="/static/home/favicon-128x128.png" alt="logo" />
+        <span class="text-white text-xl md:text-3xl font-semibold group-hover:text-gradient">Percent Human</span>
+      </a>
+
+      <div class="flex flex-wrap items-center gap-2 md:gap-4 text-gray-100 text-md ">
+        <a href="/pricing/#faq"><button type="button"
+            class="text-purple-700 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900">Learn
+            More</button></a>
+        <a href="mailto:support@percenthuman.app"><button type="button"
+            class="text-white hover:text-blue-800 border border-white hover:bg-white focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 text-center  dark:border-white dark:text-white dark:hover:text-blue-800 dark:hover:bg-blue-800 dark:focus:ring-blue-800">Contact</button></a>
+        <a href="/tos/"><button type="button"
+            class="text-white hover:text-green-800 border border-white hover:bg-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 text-center  dark:border-white dark:text-white dark:hover:text-green-800 dark:hover:bg-green-800 dark:focus:ring-green-800">Terms
+            of Service</button></a>
+        <a href="/privacy/"><button type="button"
+            class="text-white hover:text-red-800 border border-white hover:bg-white focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 text-center  dark:border-white dark:text-white dark:hover:text-red-800 dark:hover:bg-red-800 dark:focus:ring-red-800">Privacy</button></a>
+      </div>
+      <div class="items-center justify-center">
+        <span class="text-white text-md md:text-lg font-semibold ">&copy 2023 Percent Human
+          AI LLC</span>
+      </div>
+    </div>
+  </footer>
+<script src="/static/django-browser-reload/reload-listener.js" data-worker-script-path="/static/django-browser-reload/reload-worker.js" data-events-path="/__reload__/events/" defer></script></body>
+
+</html>
